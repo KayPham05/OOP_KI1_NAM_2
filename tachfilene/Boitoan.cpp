@@ -14,7 +14,7 @@ struct TarotCard {
     string meaning;
 };
 
-vector<TarotCard> createTarotDeck() {
+std::vector<TarotCard> createTarotDeck1() {
     return {
         {"The Fool (Ke Kho Khon): Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc."},
 
