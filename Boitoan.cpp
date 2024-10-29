@@ -124,7 +124,7 @@ public:
         getline(cin, gioiTinh);
 
         // Luu thong tin vao file
-        ofstream outFile("user_info.txt", ios::app);
+        ofstream outFile("user_info.txt", ios::trunc);
         if (outFile.is_open()) {
             outFile << "Ten: " << ten << ", Ngay Sinh: " << ngaySinh << ", Gioi Tinh: " << gioiTinh << endl;
             outFile.close();
@@ -231,11 +231,11 @@ public:
             case 9:
                 cout << "So 9: Dai dien cho tinh than nhan dao, thuong nghi cho nguoi khac, cho cong dong. Dong thoi, day la nguoi co nghi luc va y chi manh me, dung cam." << endl;
                 break;
-            case 10:
-                cout << "So 11/2: Dai dien cho su tinh te, so huu mot truc giac vo cung tot, co kha nang thau hieu nhung nguoi xung quanh." << endl;
+            case 11:
+                cout << "So 11: Dai dien cho su tinh te, so huu mot truc giac vo cung tot, co kha nang thau hieu nhung nguoi xung quanh." << endl;
                 break;
             case 22:
-                cout << "So  22/4: Dai dien cho su kien cuong, thong minh va quyet doan. Ngoai ra, day la con so co trach nhiem, nguyen tac va ky luat trong cong viec va cuoc song." << endl;
+                cout << "So  22: Dai dien cho su kien cuong, thong minh va quyet doan. Ngoai ra, day la con so co trach nhiem, nguyen tac va ky luat trong cong viec va cuoc song." << endl;
                 break;
             default:
                 cout << "Khong co y nghia cho so nay." << endl;
@@ -358,4 +358,4 @@ int main() {
     app.start();
     return 0;
 }
-// dcm chung m
+// moi push
