@@ -14,7 +14,7 @@ struct TarotCard {
     string meaning;
 };
 
-std::vector<TarotCard> createTarotDeck1() {
+    vector<TarotCard> createTarotDeck1() {
     return {
         {"The Fool (Ke Kho Khon): Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc."},
 
@@ -231,7 +231,7 @@ public:
             case 9:
                 cout << "So 9: Dai dien cho tinh than nhan dao, thuong nghi cho nguoi khac, cho cong dong. Dong thoi, day la nguoi co nghi luc va y chi manh me, dung cam." << endl;
                 break;
-            case 10:
+            case 11:
                 cout << "So 11/2: Dai dien cho su tinh te, so huu mot truc giac vo cung tot, co kha nang thau hieu nhung nguoi xung quanh." << endl;
                 break;
             case 22:
@@ -272,7 +272,7 @@ public:
             } else if (key == 13) { // Phim Enter
                 system("cls");
                 if (selected >= 0 && selected <= 5) {
-                    vector<TarotCard> deck = createTarotDeck();
+                    vector<TarotCard> deck = createTarotDeck1();
                     TarotCard drawnCard = drawRandomCard(deck);
                     
                     switch (selected) {
@@ -358,4 +358,3 @@ int main() {
     app.start();
     return 0;
 }
-// dcm chung m
