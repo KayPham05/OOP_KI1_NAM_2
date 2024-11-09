@@ -8,7 +8,11 @@
 #include <ctime>       // Thư viện để sử dụng time
 
 using namespace std;
-
+// Hàm set màu
+ void setColor(int color) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, color);
+}
 struct TarotCard {
     string name;
     string meaning;
@@ -21,7 +25,7 @@ vector<TarotCard> createTarotDeck() {
      "Tinh huong: Bat dau mot cong viec moi, thay doi noi o, hoac bat dau mot moi quan he ma khong chac chan ve tuong lai."},
 
     {"The Magician (Nha Ao Thuat): Ky nang, kha nang dieu khien va tao ra thuc te bang suc manh y chi. Nhieu khi goi y su tap trung vao muc tieu va su tu tin.\n"
-     "Y nghia sau sac: Khả năng bien uoc mo thanh hien thuc thong qua su tap trung va y chi. Khuyen khich ban tan dung tai nang cua minh.\n"
+     "Y nghia sau sac: Kha nang bien uoc mo thanh hien thuc thong qua su tap trung va y chi. Khuyen khich ban tan dung tai nang cua minh.\n"
      "Tinh huong: Ban co the thanh cong bang cach su dung nhung ky nang va nguon luc da co."},
 
     {"The High Priestess (Nu Tu Te Cao Cap): Su truc giac, bi mat va tri tue noi tam. Khuyen nen lang nghe tieng noi ben trong va tim kiem hieu biet chinh minh.\n"
@@ -49,7 +53,7 @@ vector<TarotCard> createTarotDeck() {
      "Tinh huong: Doi mat voi mot thu thach lon trong cuoc song."},
 
     {"Strength (Suc Manh): Su manh me noi tai, su kien nhan va long dung cam. Khuyen nen dung cam doi mat voi kho khan.\n"
-     "Y nghia sau sac: Su kiên nhẫn, long dung cam. Khuyen khich ban doi mat voi kho khan.\n"
+     "Y nghia sau sac: Su kien nhan, long dung cam. Khuyen khich ban doi mat voi kho khan.\n"
      "Tinh huong: Can phai doi mat voi mot noi so hoac thu thach."},
 
     {"The Hermit (Nha An Si): Su suy tu, co doc va tim kiem su that. Goi y su can thiet cua viec nghi lai, tu van va hieu biet noi tam.\n"
@@ -479,17 +483,35 @@ public:
         int selected = 0;
         char key;
         do {
-            system("cls");
-            cout << "+-------------------------------+" << endl;
-            cout << "|       MENU THAN SO HOC        |" << endl;
-            cout << "+-------------------------------+" << endl;
-            cout << (selected == 0 ? " -> " : "    ") << "Xem so duong doi (Life Path Number)\n";
-            cout << (selected == 1 ? " -> " : "    ") << "Xem so ten (Expression Number)\n";
-            cout << (selected == 2 ? " -> " : "    ") << "Xem chi so nhan cach (Personality Number)\n"; // Thêm lựa chọn
-            cout << (selected == 3 ? " -> " : "    ") << "Xem chi so su menh (Mission Number)\n"; // Thêm lựa chọn
-            cout << (selected == 4 ? " -> " : "    ") << "Xem chi so linh hon (Soul Urge Number)\n"; // Thêm lựa chọn
-            cout << (selected == 5 ? " -> " : "    ") << "Quay lai menu chinh\n";
-            cout << "+-------------------------------+" << endl;
+           system("cls");
+    setColor(13); 
+    cout << "+----------------------------------------------+" << endl;
+    setColor(14); 
+    cout << "|               MENU THAN SO HOC               |" << endl;
+    setColor(15);
+    cout << "+----------------------------------------------+" << endl;
+
+    // Các tùy chọn với màu sắc khác nhau khi được chọn
+    setColor(selected == 0 ? 11 : 7); // Màu xanh dương nhạt nếu được chọn
+    cout << "|"<<(selected == 0 ? " -> " : "    ") << "Xem so duong doi (Life Path Number)       |"<<endl;
+
+    setColor(selected == 1 ? 10 : 7); // Màu xanh lá nếu được chọn
+    cout << "|"<<(selected == 1 ? " -> " : "    ") << "Xem so ten (Expression Number)            |"<<endl;
+
+    setColor(selected == 2 ? 12 : 7); // Màu đỏ nếu được chọn
+    cout << "|"<<(selected == 2 ? " -> " : "    ") << "Xem chi so nhan cach (Personality Number) |"<<endl;
+
+    setColor(selected == 3 ? 13 : 7); // Màu tím nếu được chọn
+    cout << "|"<<(selected == 3 ? " -> " : "    ") << "Xem chi so su menh (Mission Number)       |"<<endl;
+
+    setColor(selected == 4 ? 9 : 7); // Màu xanh dương đậm nếu được chọn
+    cout << "|"<<(selected == 4 ? " -> " : "    ") << "Xem chi so linh hon (Soul Urge Number)    |"<<endl;
+
+    setColor(selected == 5 ? 14 : 7); // Màu vàng nếu được chọn
+    cout << "|"<<(selected == 5 ? " -> " : "    ") << "Quay lai menu chinh                       |"<<endl;
+
+    setColor(10); 
+    cout << "+----------------------------------------------+" << endl;
 
             key = _getch();
             if (key == 72) { // Mũi tên lên
@@ -528,33 +550,57 @@ public:
         vector<TarotCard> deck = createTarotDeck();
         int selected = 0;
         char key;
+
         do {
             system("cls");
-            cout << "+-------------------------------+" << endl;
-            cout << "|        MENU BOI TAROT         |" << endl;
-            cout << "+-------------------------------+" << endl;
-            cout << (selected == 0 ? " -> " : "    ") << "Boi su nghiep\n";
-            cout << (selected == 1 ? " -> " : "    ") << "Boi tinh yeu\n";
-            cout << (selected == 2 ? " -> " : "    ") << "Boi gia dinh\n";
-            cout << (selected == 3 ? " -> " : "    ") << "Boi qua khu\n";
-            cout << (selected == 4 ? " -> " : "    ") << "Boi hien tai\n";
-            cout << (selected == 5 ? " -> " : "    ") << "Quay lai menu chinh\n";
-            cout << "+-------------------------------+" << endl;
+            setColor(5); 
+            cout << "+------------------------------+" << endl;
+            setColor(14); // Màu vàng
+            cout << "|         MENU BOI TAROT       |" << endl;
+            setColor(4); 
+            cout << "+------------------------------+" << endl;
 
-            key = _getch();
+            // In các tùy chọn với màu sắc giống như menu chính
+            setColor(selected == 0 ? 11 : 7); // Màu xanh lá cây nếu được chọn
+            cout << "|"<<(selected == 0 ? " -> " : "    ") << "Boi su nghiep             |"<<endl;
+
+            setColor(selected == 1 ? 10 : 7); // Màu xanh lá khác nếu được chọn
+            cout << "|"<<(selected == 1 ? " -> " : "    ") << "Boi tinh yeu              |"<<endl;
+
+            setColor(selected == 2 ? 12 : 7); // Màu đỏ nếu được chọn
+            cout << "|"<<(selected == 2 ? " -> " : "    ") << "Boi gia dinh              |"<<endl;
+
+            setColor(selected == 3 ? 13 : 7); // Màu tím nếu được chọn
+            cout << "|"<<(selected == 3 ? " -> " : "    ") << "Boi qua khu               |"<<endl;
+
+            setColor(selected == 4 ? 9 : 7); // Màu xanh dương nếu được chọn
+            cout << "|"<<(selected == 4 ? " -> " : "    ") << "Boi hien tai              |"<<endl;
+
+  		    setColor(selected == 5 ? 13 : 7); // Màu xanh dương nếu được chọn
+            cout << "|"<<(selected == 5 ? " -> " : "    ") << "Boi tuong lai             |"<<endl;
+            
+            setColor(selected == 6 ? 14 : 7); // Màu vàng nếu được chọn
+            cout << "|"<<(selected == 6 ? " -> " : "    ") << "Quay lai menu chinh       |"<<endl;
+
+            setColor(6); // Trở lại màu trắng
+            cout << "+------------------------------+" << endl;
+
+            key = _getch(); // Nhận phím từ người dùng
+
             if (key == 72) { // Mũi tên lên
-                selected = (selected - 1 + 6) % 6;
+                selected = (selected - 1 + 7) % 7;
             } else if (key == 80) { // Mũi tên xuống
-                selected = (selected + 1) % 6;
+                selected = (selected + 1) % 7;
             } else if (key == 13) { // Phím Enter
                 system("cls");
-                if (selected < 5) { // Chỉ số lựa chọn trong menu
+                if (selected <6) { // Chỉ số lựa chọn trong menu
                     TarotCard drawnCard = drawRandomCard(deck);
                     cout << "Ban da rut duoc la bai: " << drawnCard.name << endl;
-                    system("pause");
+                  
                 } else {
                     break; // Quay lại menu chính
                 }
+                  system("pause");
             }
         } while (true);
     }
@@ -563,37 +609,52 @@ public:
 int main() {
     srand(static_cast<unsigned>(time(0))); // Khởi tạo hạt giống cho random
 
+
     User user;
     FortuneTelling* reading = nullptr; // Con trỏ cho việc bói toán
-    int selectedOption = 0;
+    int selected = 0;
     char key;
     do {
-        system("cls");
-        cout << "+-------------------------------+" << endl;
-        cout << "|          MENU CHiNH           |" << endl;
-        cout << "+-------------------------------+" << endl;
-        cout << (selectedOption == 0 ? " -> " : "    ") << "Nhap thong tin nguoi xem boi\n"; // Thêm tùy chọn nhập thông tin
-        cout << (selectedOption == 1 ? " -> " : "    ") << "Xem boi than so hoc\n";
-        cout << (selectedOption == 2 ? " -> " : "    ") << "Xem boi tarot\n";
-        cout << (selectedOption == 3 ? " -> " : "    ") << "Thoat\n"; // Thêm tùy chọn thoát
-        cout << "+-------------------------------+" << endl;
+           system("cls");
+    setColor(9); // Màu trắng mặc định
+    cout << "+----------------------------------+" << endl;
+    setColor(14);
+    cout << "|             MENU CHINH           |" << endl;
+    setColor(13);
+    cout << "+----------------------------------+" << endl;
+
+    setColor(selected == 0 ? 11 : 7); // Màu xanh lá cây cho mục đang chọn, màu trắng cho mục khác
+    cout << "|"<<(selected == 0 ? " -> " : "    ") << "Nhap thong tin nguoi xem boi  |"<<endl;
+
+    setColor(selected == 1 ? 10 : 7);
+    cout << "|"<<(selected == 1 ? " -> " : "    ") << "Xem boi than so hoc           |"<<endl;
+
+    setColor(selected == 2 ? 12 : 7);
+    cout << "|"<<(selected == 2 ? " -> " : "    ") << "Xem boi tarot                 |"<<endl;
+
+    setColor(selected== 3 ? 13 : 7);
+    cout << "|"<<(selected == 3 ? " -> " : "    ") << "Thoat                         |"<<endl;
+
+    setColor(4); // Trở lại màu trắng sau khi in menu
+    cout << "+----------------------------------+" << endl;
+        
 
         key = _getch();
         if (key == 72) { // Mũi tên lên
-            selectedOption = (selectedOption - 1 + 4) % 4;
+            selected = (selected - 1 + 4) % 4;
         } else if (key == 80) { // Mũi tên xuống
-            selectedOption = (selectedOption + 1) % 4;
+            selected = (selected + 1) % 4;
         } else if (key == 13) { // Phím Enter
             system("cls");
-            if (selectedOption == 0) {
+            if (selected == 0) {
                 cin >> user; // Nhập thông tin từ người dùng
                 user.saveToFile(); // Lưu thông tin vào file
                 system("pause");
-            } else if (selectedOption == 1) {
+            } else if (selected == 1) {
                 reading = new NumerologyReading(); 
                 reading->boiToan(user);
                 delete reading; // Giải phóng bộ nhớ
-            } else if (selectedOption == 2) {
+            } else if (selected == 2) {
                 reading = new TarotReading();
                 reading->boiToan(user);
                 delete reading; // Giải phóng bộ nhớ
