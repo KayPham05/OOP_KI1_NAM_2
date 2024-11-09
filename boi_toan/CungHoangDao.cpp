@@ -1,7 +1,7 @@
 #include "CungHoangDao.h"
 #include "User.h"
 
-void CungHoangDao::print(User& user) {
+void CungHoangDao::print(User& user)  {
     NgaySinh ngaySinh = user.getDay();  // Sử dụng getDay() từ lớp User
     int ngay = ngaySinh.ngay;
     int thang = ngaySinh.thang;

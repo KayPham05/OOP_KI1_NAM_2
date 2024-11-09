@@ -3,11 +3,11 @@
 
 #include <string>
 #include "User.h"
+#include "Boi.cpp"
 using namespace std;
 
-class CungHoangDao : public User{
+class CungHoangDao : public Boi {
     public:
-    CungHoangDao():User(){}
     void print(User& user);
 };
 

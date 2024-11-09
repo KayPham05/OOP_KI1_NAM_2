@@ -3,10 +3,16 @@
 
 #include <iostream>
 #include <string>
-#include "NgaySinh.h" 
+
 
 using namespace std;
 
+struct NgaySinh {
+    int ngay, thang, nam;
+};
+
+bool isLeapYear(int nam);
+bool isValidDate(int ngay, int thang, int nam);
 class User {
 private:
     string Ten;

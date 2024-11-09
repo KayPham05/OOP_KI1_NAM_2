@@ -24,3 +24,6 @@ Ten: sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
 Ten: sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
 Ten: sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
 Ten: sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
+Ten: ha, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
+Ten: sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam
+Ten: pham cong sy, Ngay Sinh: 7/8/2005, Gioi Tinh: nam

@@ -5,9 +5,8 @@
 #include "User.h"
 using namespace std;
 
-class ThanSoHoc : public User{
+class ThanSoHoc{
     public:
-        ThanSoHoc() : User() {}
     void display(User& user);
     int calculateNumerology(User& user);
 };
