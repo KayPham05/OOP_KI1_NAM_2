@@ -3,10 +3,9 @@
 
 #include <string>
 #include "User.h"
-#include "Boi.cpp"
 using namespace std;
 
-class CungHoangDao : public Boi {
+class CungHoangDao:public User {
     public:
     void print(User& user);
 };

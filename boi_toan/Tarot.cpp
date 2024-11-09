@@ -1,17 +1,21 @@
-#include"Tarot.h"
+#include "Tarot.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <conio.h>
 #include <vector>
-#include <string>
+
 using namespace std;
-struct TarotCard {
-    string name;
-};
-TarotCard drawRandomCard(const vector<TarotCard>& deck) {
+
+TarotCard RutBai(const vector<TarotCard>& deck) {
     int randomIndex = rand() % deck.size();
     return deck[randomIndex];
 }
+
+// Triển khai hàm tạo bộ bài Tarot
 vector<TarotCard> createTarotDeck() {
-      return {
-    {"The Fool (Ke Kho Khon): Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc.\n"
+    return {
+          {"The Fool (Ke Kho Khon): Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc.\n"
      "Y nghia sau sac: Bat dau mot hanh trinh moi ma khong co su chuan bi day du. Tuong trung cho su ngây thơ va tu do trong viec chap nhan nhung rui ro.\n"
      "Tinh huong: Bat dau mot cong viec moi, thay doi noi o, hoac bat dau mot moi quan he ma khong chac chan ve tuong lai."},
 
@@ -94,6 +98,46 @@ vector<TarotCard> createTarotDeck() {
     {"The World (The Gioi): Su hoan thanh, thanh tuu va su trọn ven. Dai dien cho su vien man va thanh cong trong cuoc song.\n"
      "Y nghia sau sac: Su hoan thanh va thanh tuu. Bieu trung cho su hoan thanh va ket thuc thanh cong.\n"
      "Tinh huong: Hoan thanh mot chu ky lon trong cuoc song."}
-};
+    };
+}
 
+void TarotReading::boiToan(User& user) {
+    vector<TarotCard> deck = createTarotDeck();  // Tạo bộ bài Tarot
+    int selected = 0;
+    char key;
+    srand(static_cast<unsigned>(time(0)));
+
+    do {
+        system("cls");
+        cout << "+-------------------------------+" << endl;
+        cout << "|        MENU BOI TAROT         |" << endl;
+        cout << "+-------------------------------+" << endl;
+        cout << (selected == 0 ? " -> " : "    ") << "Boi su nghiep\n";
+        cout << (selected == 1 ? " -> " : "    ") << "Boi tinh yeu\n";
+        cout << (selected == 2 ? " -> " : "    ") << "Boi gia dinh\n";
+        cout << (selected == 3 ? " -> " : "    ") << "Boi qua khu\n";
+        cout << (selected == 4 ? " -> " : "    ") << "Boi hien tai\n";
+        cout << (selected == 5 ? " -> " : "    ") << "Quay lai menu chinh\n";
+        cout << "+-------------------------------+" << endl;
+
+        key = _getch();
+        if (key == 72) { // Mũi tên lên
+            selected = (selected - 1 + 6) % 6;
+        } else if (key == 80) { // Mũi tên xuống
+            selected = (selected + 1) % 6;
+        } else if (key == 13) { // Phím Enter
+            system("cls");
+            if (selected < 5) {
+                TarotCard drawnCard = RutBai(deck);  // Rút một lá bài ngẫu nhiên
+                cout << "Ban da rut duoc la bai: " << drawnCard.ten << endl;
+                system("pause");
+            } else {
+                break;
+            }
+        }
+    } while (true);
+}
+
+string TarotReading::Soduongdoi(int Sochudao) {
+    return "So duong doi cua ban la " + to_string(Sochudao);
 }

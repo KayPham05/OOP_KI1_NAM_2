@@ -23,11 +23,10 @@ bool isValidDate(int ngay, int thang, int nam) {
 User::User(){}
 
 istream& operator>>(istream &is, User &p) {
-    // Nhập thông tin người dùng từ bàn phím
     cout << "Nhap ten cua ban: ";
     getline(is, p.Ten);
     cout << "Nhap vao gioi tinh cua ban (nam/nu)\n";
-    getline(cin, p.GioiTinh);
+    getline(is, p.GioiTinh);
     while (p.GioiTinh != "nam" && p.GioiTinh != "nu") {
         cout << "Gioi tinh ban nhap khong hop le. Moi nhap lai!\n";
         cout << "Nhap vao gioi tinh cua ban (nam/nu)\n";
@@ -37,7 +36,7 @@ istream& operator>>(istream &is, User &p) {
     cout << "Nhap vao nam sinh cua ban: ";
     is >> p.day.nam;
     while (p.day.nam <= 0) {
-        cout << "Ban sinh truoc Cong Nguyen ha? Moi nhap lai!\n";
+        cout << "Nam sinh khong hop le Moi nhap lai!\n";
         cout << "Nhap vao nam sinh cua ban: ";
         is >> p.day.nam;
     }
@@ -104,4 +103,8 @@ int User::calculateAge() {
 
 NgaySinh User::getDay(){
     return day;
+}
+
+string User::getName(){
+    return Ten;
 }

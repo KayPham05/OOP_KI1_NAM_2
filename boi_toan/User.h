@@ -26,6 +26,7 @@ public:
     void readFromFile();
     int calculateAge();
     NgaySinh getDay();
+    string getName();
 };
 
 #endif 
