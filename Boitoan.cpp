@@ -124,7 +124,7 @@ public:
         getline(cin, gioiTinh);
 
         // Luu thong tin vao file
-        ofstream outFile("user_info.txt", ios::app);
+        ofstream outFile("user_info.txt", ios::trunc);
         if (outFile.is_open()) {
             outFile << "Ten: " << ten << ", Ngay Sinh: " << ngaySinh << ", Gioi Tinh: " << gioiTinh << endl;
             outFile.close();
