@@ -27,6 +27,7 @@ public:
     int calculateAge();
     NgaySinh getDay();
     string getName();
+    string User::setName();
 };
 
 #endif 

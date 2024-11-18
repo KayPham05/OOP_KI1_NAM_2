@@ -3,6 +3,7 @@
 #include "ThanSoHoc.h"
 #include <fstream>
 #include <ctime>
+#include <string.h>
 
 bool isLeapYear(int nam) {
     return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
@@ -20,16 +21,21 @@ bool isValidDate(int ngay, int thang, int nam) {
 }
 
 
-User::User(){}
+User::User() : Ten(""), GioiTinh(""), day{0, 0, 0} {}
+
 
 istream& operator>>(istream &is, User &p) {
-    cout << "Nhap ten cua ban: ";
+    cout << "Nhap ten cua ban (vui long nhap day du ho ten):";
     getline(is, p.Ten);
-    cout << "Nhap vao gioi tinh cua ban (nam/nu)\n";
+    while (p.Ten.empty()) {
+        cout << "ten nhap vao khong duoc de trong moi nhap lai!" << endl;
+        getline(is, p.Ten);
+    }
+    cout << "Nhap vao gioi tinh cua ban (nam/nu): ";
     getline(is, p.GioiTinh);
-    while (p.GioiTinh != "nam" && p.GioiTinh != "nu") {
+    while (p.GioiTinh!="nam"&& p.GioiTinh!="nu"&& p.GioiTinh !="Nam" && p.GioiTinh!="Nu") {
         cout << "Gioi tinh ban nhap khong hop le. Moi nhap lai!\n";
-        cout << "Nhap vao gioi tinh cua ban (nam/nu)\n";
+        cout << "Nhap vao gioi tinh cua ban (nam/nu):";
         getline(is, p.GioiTinh); 
     }
 
@@ -86,20 +92,7 @@ void User::readFromFile() {
     }
 }
 
-int User::calculateAge() {
-    time_t now = time(0);
-    tm *ltm = localtime(&now);
 
-    int currentYear = 1900 + ltm->tm_year;
-    int currentMonth = 1 + ltm->tm_mon;
-    int currentDay = ltm->tm_mday;
-
-    int age = currentYear - day.nam;
-    if (currentMonth < day.thang || (currentMonth == day.thang && currentDay < day.ngay)) {
-        age--;
-    }
-    return age;
-}
 
 NgaySinh User::getDay(){
     return day;
@@ -107,4 +100,8 @@ NgaySinh User::getDay(){
 
 string User::getName(){
     return Ten;
+}
+
+string User::getGT() {
+    return GioiTinh;
 }
