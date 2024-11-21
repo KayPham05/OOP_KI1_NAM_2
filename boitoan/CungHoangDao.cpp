@@ -30,7 +30,7 @@ void CungHoangDao::print(User& user)  {
 } else if ((thang == 2 && ngay >= 19) || (thang == 3 && ngay <= 20)) {
     cout << "Song Ngu (Pisces): Nhay cam va tinh te, Song Ngu co kha nang dong cam va rat yeu thuong moi nguoi. Ho rat de tham gia vao the gioi cam xuc cua nguoi khac va thuong co kha nang nghe thuat. Tuy nhien, Song Ngu cung de bi lang quen va rat de ton thuong.";
 } else {
-    cout << "Ngay thang khong hop le";
+    cout << "Ngay thang khong hop le\n";
 }
 
 }
