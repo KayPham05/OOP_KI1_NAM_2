@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\sss.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sss.exe||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\ThanSoHoc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ThanSoHoc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\User.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:User.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CungHoangDao.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CungHoangDao.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tarot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tarot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\thong_tin_nguoi_dung.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:thong_tin_nguoi_dung.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CungHoangDao.cpp",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.cpp",
+              "RelativeDocumentMoniker": "CungHoangDao.cpp",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.cpp",
+              "RelativeToolTip": "CungHoangDao.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-19T10:27:07.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CungHoangDao.h",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.h",
+              "RelativeDocumentMoniker": "CungHoangDao.h",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\CungHoangDao.h",
+              "RelativeToolTip": "CungHoangDao.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T10:27:05.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sss.exe",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\sss.exe",
+              "RelativeDocumentMoniker": "sss.exe",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\sss.exe",
+              "RelativeToolTip": "sss.exe",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000165|",
+              "WhenOpened": "2024-11-19T10:26:57.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tarot.cpp",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.cpp",
+              "RelativeDocumentMoniker": "Tarot.cpp",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.cpp",
+              "RelativeToolTip": "Tarot.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-19T10:26:54.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tarot.h",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h",
+              "RelativeDocumentMoniker": "Tarot.h",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h",
+              "RelativeToolTip": "Tarot.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T10:26:40.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThanSoHoc.h",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\ThanSoHoc.h",
+              "RelativeDocumentMoniker": "ThanSoHoc.h",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\ThanSoHoc.h",
+              "RelativeToolTip": "ThanSoHoc.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T10:26:28.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "thong_tin_nguoi_dung.txt",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\thong_tin_nguoi_dung.txt",
+              "RelativeDocumentMoniker": "thong_tin_nguoi_dung.txt",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\thong_tin_nguoi_dung.txt",
+              "RelativeToolTip": "thong_tin_nguoi_dung.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-11-19T10:26:26.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cpp",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\User.cpp",
+              "RelativeDocumentMoniker": "User.cpp",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\User.cpp",
+              "RelativeToolTip": "User.cpp",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-19T10:19:14.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-18T06:29:06.499Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
