@@ -24,9 +24,9 @@ public:
     friend istream& operator>>(istream &is, User &p);
     void output();
     void readFromFile();
+    int calculateAge();
     NgaySinh getDay();
     string getName();
-    string getGT();
 };
 
 #endif 

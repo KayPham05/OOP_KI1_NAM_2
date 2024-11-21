@@ -3,7 +3,6 @@
 #include "ThanSoHoc.h"
 #include <fstream>
 #include <ctime>
-#include <string.h>
 
 bool isLeapYear(int nam) {
     return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
@@ -21,19 +20,16 @@ bool isValidDate(int ngay, int thang, int nam) {
 }
 
 
-User::User() : Ten(""), GioiTinh(""), day{0, 0, 0} {}
+User::User(){
 
+}
 
 istream& operator>>(istream &is, User &p) {
-    cout << "Nhap ten cua ban (vui long nhap day du ho ten):";
+    cout << "Nhap ten cua ban: ";
     getline(is, p.Ten);
-    while (p.Ten.empty()) {
-        cout << "ten nhap vao khong duoc de trong moi nhap lai!" << endl;
-        getline(is, p.Ten);
-    }
     cout << "Nhap vao gioi tinh cua ban (nam/nu): ";
     getline(is, p.GioiTinh);
-    while (p.GioiTinh!="nam"&& p.GioiTinh!="nu"&& p.GioiTinh !="Nam" && p.GioiTinh!="Nu") {
+    while (p.GioiTinh != "nam" && p.GioiTinh != "nu") {
         cout << "Gioi tinh ban nhap khong hop le. Moi nhap lai!\n";
         cout << "Nhap vao gioi tinh cua ban (nam/nu):";
         getline(is, p.GioiTinh); 
@@ -100,8 +96,4 @@ NgaySinh User::getDay(){
 
 string User::getName(){
     return Ten;
-}
-
-string User::getGT() {
-    return GioiTinh;
 }

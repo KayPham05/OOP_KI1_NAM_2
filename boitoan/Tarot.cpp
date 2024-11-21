@@ -6,7 +6,20 @@
 #include <vector>
 
 using namespace std;
+void SetColor(int color) {
+    cout << "\033[" << color << "m";
+}
 
+void ReSetColor() {
+    cout << "\033[0m";
+}
+void OpenWebsite() {
+    // URL of the website
+    string url = "https://tarot.vn/giai-y-nghia-78-la-bai-tarot/";
+    // Open the URL in the default web browser
+    string command = "start " + url;
+    system(command.c_str());
+}
 TarotCard RutBai(const vector<TarotCard>& deck) {
     int randomIndex = rand() % deck.size();
     return deck[randomIndex];
@@ -15,29 +28,47 @@ TarotCard RutBai(const vector<TarotCard>& deck) {
 // Triển khai hàm tạo bộ bài Tarot
 vector<TarotCard> createTarotDeck() {
     return {
-          {"The Fool (Ke Kho Khon): Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc.\n"
-     "Y nghia sau sac: Bat dau mot hanh trinh moi ma khong co su chuan bi day du. Tuong trung cho su ngây thơ va tu do trong viec chap nhan nhung rui ro.\n"
-     "Tinh huong: Bat dau mot cong viec moi, thay doi noi o, hoac bat dau mot moi quan he ma khong chac chan ve tuong lai."},
+       {"The Fool(Ke Kho Khon)\n"
+        "+============================================================================================================================================================+\n"
+        "|Dai dien cho su khoi dau, su ngau hung, va su tu do. Thuong lien quan den hanh trinh moi ma khong biet truoc ket qua, su chinh phuc su khong biet truoc.    |\n"
+        "|Y nghia sau sac: Bat dau mot hanh trinh moi ma khong co su chuan bi day du. Tuong trung cho su ngay tho va tu do trong viec chap nhan nhung rui ro.         |\n"
+        "|Tinh huong: Bat dau mot cong viec moi, thay doi noi o, hoac bat dau mot moi quan he ma khong chac chan ve tuong lai.                                        |\n"
+        "+============================================================================================================================================================+"},
 
-    {"The Magician (Nha Ao Thuat): Ky nang, kha nang dieu khien va tao ra thuc te bang suc manh y chi. Nhieu khi goi y su tap trung vao muc tieu va su tu tin.\n"
-     "Y nghia sau sac: Khả năng bien uoc mo thanh hien thuc thong qua su tap trung va y chi. Khuyen khich ban tan dung tai nang cua minh.\n"
-     "Tinh huong: Ban co the thanh cong bang cach su dung nhung ky nang va nguon luc da co."},
+    {"The Magician (Nha Ao Thuat)\n"
+     "+======================================================================================================================================+\n"
+     "|Ky nang, kha nang dieu khien va tao ra thuc te bang suc manh y chi. Nhieu khi goi y su tap trung vao muc tieu va su tu tin.           |\n"
+     "|Y nghia sau sac: Kha nang bien uoc mo thanh hien thuc thong qua su tap trung va y chi. Khuyen khich ban tan dung tai nang cua minh.   |\n"
+     "|Tinh huong: Ban co the thanh cong bang cach su dung nhung ky nang va nguon luc da co.                                                 |\n"
+     "+======================================================================================================================================+"},
 
-    {"The High Priestess (Nu Tu Te Cao Cap): Su truc giac, bi mat va tri tue noi tam. Khuyen nen lang nghe tieng noi ben trong va tim kiem hieu biet chinh minh.\n"
-     "Y nghia sau sac: Khuyen khich viec lang nghe truc giac va kham pha nhung bi mat. Nu Tu Te bieu trung cho su hieu biet sau sac ve ban than.\n"
-     "Tinh huong: Can tin vao cam giac truc giac khi doi mat voi mot quyet dinh quan trong."},
+    {"The High Priestess (Nu Tu Te Cao Cap)\n"
+     "+===========================================================================================================================================+\n"
+     "|Su truc giac, bi mat va tri tue noi tam. Khuyen nen lang nghe tieng noi ben trong va tim kiem hieu biet chinh minh.                        |\n"
+     "|Y nghia sau sac: Khuyen khich viec lang nghe truc giac va kham pha nhung bi mat. Nu Tu Te bieu trung cho su hieu biet sau sac ve ban than. |\n"
+     "|Tinh huong: Can tin vao cam giac truc giac khi doi mat voi mot quyet dinh quan trong.                                                      |\n"
+     "+===========================================================================================================================================+"},
 
-    {"The Empress (Hoang Hau): Dai dien cho su phong thinh, tinh yeu, me thien nhien, va su cham soc. La bieu tuong cua tinh thuong va nu tinh.\n"
-     "Y nghia sau sac: Su nuoi duong va kha nang sinh san. Bieu tuong cho su phong phu, cham soc va tinh yeu.\n"
-     "Tinh huong: Phat trien mot du an moi, nuoi duong cac moi quan he ca nhan, tim kiem su binh yen."},
+    {"The Empress (Hoang Hau)\n"
+     "+====================================================================================================================+\n"
+     "|Dai dien cho su phong thinh, tinh yeu, me thien nhien, va su cham soc. La bieu tuong cua tinh thuong va nu tinh.    |\n"
+     "|Y nghia sau sac: Su nuoi duong va kha nang sinh san. Bieu tuong cho su phong phu, cham soc va tinh yeu.             |\n"
+     "|Tinh huong: Phat trien mot du an moi, nuoi duong cac moi quan he ca nhan, tim kiem su binh yen.                     |\n"
+     "+====================================================================================================================+"},
 
-    {"The Emperor (Hoang De): Su kiem soat, quyen luc va cau truc. La bieu tuong cua ke lanh dao, nguyen tac nam tinh va trat tu xa hoi.\n"
-     "Y nghia sau sac: Quyen luc va su kiem soat. Khuyen khich su lanh dao va xay dung nen tang vung chac cho tuong lai.\n"
-     "Tinh huong: Can co su quyet doan trong viec ra quyet dinh lon."},
+    {"The Emperor (Hoang De)\n"
+     "+======================================================================================================================+"
+     "|Su kiem soat, quyen luc va cau truc. La bieu tuong cua ke lanh dao, nguyen tac nam tinh va trat tu xa hoi.            |\n"
+     "|Y nghia sau sac: Quyen luc va su kiem soat. Khuyen khich su lanh dao va xay dung nen tang vung chac cho tuong lai.    |\n"
+     "|Tinh huong: Can co su quyet doan trong viec ra quyet dinh lon.                                                        |\n"
+     "+======================================================================================================================+"},
 
-    {"The Hierophant (Thay Tu Cao Cap): Dai dien cho truyen thong, giao duc, va dao ly tam linh. Goi y su can bang giua thuc hanh va hoc thuyet.\n"
-     "Y nghia sau sac: Bieu trung cho truyen thong va giao duc. Khuyen khich tim kiem su chi dan va hoc hoi.\n"
-     "Tinh huong: Tham gia mot khoa hoc, tim su tu van tu nguoi co kinh nghiem."},
+    {"The Hierophant (Thay Tu Cao Cap)\n"
+     "+=============================================================================================================+"
+     "|Dai dien cho truyen thong, giao duc, va dao ly tam linh. Goi y su can bang giua thuc hanh va hoc thuyet.     |\n"
+     "|Y nghia sau sac: Bieu trung cho truyen thong va giao duc. Khuyen khich tim kiem su chi dan va hoc hoi.       |\n"
+     "|Tinh huong: Tham gia mot khoa hoc, tim su tu van tu nguoi co kinh nghiem.                                    |\n"
+    },
 
     {"The Lovers (Nguoi Yeu Nhau): Su lua chon, moi quan he, va tinh yeu. Goi y tinh than doan ket, quyet dinh quan trong va tinh cam.\n"
      "Y nghia sau sac: Tinh yeu, su ket noi va su lua chon. Bieu tuong cho su gan ket sau sac giua hai nguoi.\n"
@@ -109,27 +140,127 @@ void TarotReading::boiToan(User& user) {
 
     do {
         system("cls");
-        cout << "+-------------------------------+" << endl;
-        cout << "|        MENU BOI TAROT         |" << endl;
-        cout << "+-------------------------------+" << endl;
-        cout << (selected == 0 ? " -> " : "    ") << "Boi su nghiep\n";
-        cout << (selected == 1 ? " -> " : "    ") << "Boi tinh yeu\n";
-        cout << (selected == 2 ? " -> " : "    ") << "Boi gia dinh\n";
-        cout << (selected == 3 ? " -> " : "    ") << "Boi qua khu\n";
-        cout << (selected == 4 ? " -> " : "    ") << "Boi hien tai\n";
-        cout << (selected == 5 ? " -> " : "    ") << "Quay lai menu chinh\n";
-        cout << "+-------------------------------+" << endl;
+        SetColor(35);  // Màu tím cho chữ "Number God Study"
+        cout << "                                  N U M B E R       G O D       S T U D Y   " << endl;
+        cout << "\n";
+        ReSetColor();
+        SetColor(33);
+        cout << "                                 +---------------------------------------+" << endl;
+        SetColor(31);
+        cout << "                                 |               BOI TAROT               |" << endl;
+        SetColor(35);
+        cout << "                                 +---------------------------------------+" << endl;
+        ReSetColor();
+        // Mục 1: Nhập thông tin người xem bói
+        if (selected == 0) {
+            SetColor(32);  // Màu xanh lá cây cho mục được chọn
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi su nghiep                      |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();  // Trở lại màu bình thường
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi su nghiep                         |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        // Mục 2: Xem thần số học
+        if (selected == 1) {
+            SetColor(33);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi tinh yeu                       |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi tinh yeu                          |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        // Mục 3: Xem cung hoàng đạo
+        if (selected == 2) {
+            SetColor(34);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi gia dinh                       |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi gia dinh                          |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        // Mục 4: Xem bói bài Tarot
+        if (selected == 3) {
+            SetColor(31);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi hien tai                       |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi hien tai                          |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+        if (selected == 4) {
+            SetColor(34);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi tuong lai                      |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi tuong lai                         |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+        if (selected == 5) {
+            SetColor(33);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Boi qua khu                        |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Boi qua khu                           |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+        // Mục 6: Thoát
+        if (selected == 6) {
+            SetColor(35);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " ->Quay lai                            |" << endl;
+            cout << "                                 =========================================" << endl;
+            ReSetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Quay lai                              |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        cout << "                                 +---------------------------------------+" << endl;
 
         key = _getch();
         if (key == 72) { // Mũi tên lên
-            selected = (selected - 1 + 6) % 6;
+            selected = (selected - 1 + 7) % 7;
         } else if (key == 80) { // Mũi tên xuống
-            selected = (selected + 1) % 6;
+            selected = (selected + 1) % 7;
         } else if (key == 13) { // Phím Enter
             system("cls");
             if (selected < 5) {
                 TarotCard drawnCard = RutBai(deck);  // Rút một lá bài ngẫu nhiên
                 cout << "Ban da rut duoc la bai: " << drawnCard.ten << endl;
+                cout << "Neu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
+                cout << "+=======================================================+" << endl;
+                cout << "|    https://tarot.vn/giai-y-nghia-78-la-bai-tarot/     |" << endl;
+                cout << "+=======================================================+" << endl;
+                cin.get();
                 system("pause");
             } else {
                 break;
