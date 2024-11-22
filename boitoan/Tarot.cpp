@@ -19,39 +19,40 @@ string TarotCard::getYNgia() const { return yNgia; }
 string TarotCard::getTinhHuong() const { return tinhHuong; }
 
 
-void printWithLineBreaks(const string& text, int maxCharsPerLine) {
-    int currentLineLength = 0;
-    string currentWord;
+void printWithLineBreaks(const string& text, int maxCharsPerLine, int x, int y) {
+    int currentLineLength = 0; // Độ dài dòng hiện tại
+    string currentWord;        // Từ hiện tại đang xử lý
+    int currentY = y;          // Vị trí dòng y hiện tại
 
     for (size_t i = 0; i < text.length(); ++i) {
         char c = text[i];
         if (c == ' ' || i == text.length() - 1) {
-            // Nếu gặp khoảng trắng hoặc đến ký tự cuối cùng
+            // Thêm ký tự cuối nếu là ký tự cuối cùng
             if (i == text.length() - 1 && c != ' ') {
-                currentWord += c; // Thêm ký tự cuối cùng
+                currentWord += c;
             }
 
+            // Nếu từ hiện tại không vừa dòng, xuống dòng
             if (currentLineLength + currentWord.length() > maxCharsPerLine) {
-                // Xuống dòng nếu độ dài dòng vượt giới hạn
-                cout << endl;
-                currentLineLength = 0;
+                currentY++;                 // Tăng dòng
+                currentLineLength = 0;      // Đặt lại độ dài dòng
+                gotoXY(x, currentY);        // Di chuyển con trỏ đến đầu dòng mới
             }
 
-            // In từ và thêm khoảng cách
+            // In từ hiện tại
             if (currentLineLength > 0) {
-                cout << " ";
+                cout << " ";                // Thêm khoảng cách giữa các từ
                 currentLineLength++;
             }
-            cout << currentWord;
+            cout << currentWord;            // In từ
             currentLineLength += currentWord.length();
             currentWord.clear();
         }
         else {
-            // Thêm ký tự vào từ hiện tại
+            // Ghép ký tự vào từ hiện tại
             currentWord += c;
         }
     }
-    cout << endl; // Xuống dòng khi kết thúc đoạn
 }
 
 void drawBox(int x, int y, int width, int height, int color) {
@@ -86,23 +87,10 @@ void drawBox(int x, int y, int width, int height, int color) {
 
 
 
-
 void TarotCard::display() const {
     vector<int> colors = { 9, 10, 11, 12, 13, 14 }; // Mảng màu
     int colorIndex = 0; // Chỉ số màu hiện tại
 
-    gotoXY(27, 5);
-    cout << ten << endl;
-    gotoXY(23, 12);
-
-    cout << "DAI DIEN";
-    
-    printWithLineBreaks(daiDien, 20); // Tùy chỉnh số ký tự tối đa mỗi dòng
-    cout << "  Y Nghia: ";
-    printWithLineBreaks(yNgia, 20);
-    cout << "  Tinh Huong: ";
-    printWithLineBreaks(tinhHuong, 20);
-    cout << endl;
 
     while (true) {
         // Xóa màn hình trước khi vẽ
@@ -112,15 +100,39 @@ void TarotCard::display() const {
         int color1 = colors[colorIndex % colors.size()];
         int color2 = colors[(colorIndex + 1) % colors.size()];
         int color3 = colors[(colorIndex + 2) % colors.size()];
-
+        int textColor = colors[(colorIndex + 3) % colors.size()];
         // Vẽ các khung
         drawBox(15, 2, 74, 30, color1); // Khung lớn
-        drawBox(25, 4, 64, 3, color3);
+        drawBox(25, 4, 54, 2, color3);
         drawBox(20, 10, 20, 20, color2); // Khung nhỏ 1
         drawBox(42, 10, 20, 20, color3); // Khung nhỏ 2
         drawBox(64, 10, 20, 20, color1); // Khung nhỏ 3
+        
+        drawBox(20, 10, 20, 2, color2);
+        drawBox(42, 10, 20, 2, color3);
+        drawBox(64, 10, 20, 2, color1);
 
-        Sleep(700);
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), textColor);
+        gotoXY(37, 5);
+        cout << ten << endl;
+        gotoXY(26, 11);
+        cout << "DAI DIEN";
+        gotoXY(22, 14);
+        printWithLineBreaks(daiDien, 17, 22, 14); // Tùy chỉnh số ký tự tối đa mỗi dòng
+        
+        gotoXY(48, 11);
+        cout << "Y NGHIA";
+        gotoXY(44, 14);
+        printWithLineBreaks(yNgia, 17, 44, 14);
+
+        gotoXY(70, 11);
+        cout << "TINH HUONG";
+        gotoXY(66, 14);
+        printWithLineBreaks(tinhHuong, 17, 66, 14);
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+
+        cout << endl;
+        Sleep(800);
         colorIndex++;
 
         if (_kbhit()) { // Nếu có phím được nhấn
@@ -308,7 +320,9 @@ void boiTarot() {
                     tarotDeck.shuffleDeck();   // Trộn bộ bài
                     TarotCard card = tarotDeck.drawCard(); // Rút một lá bài
                     card.display();           // In thông tin lá bài
-                    cout << "Nhan phim bat ky de nhap lai...";
+                    
+                    gotoXY(25, 36);
+                    cout << "ENTER DE QUAY LAI MENU BOI TAROT";
                     gotoXY(24, 19);
                     char tempKey = _getch();
                 }
