@@ -1,5 +1,4 @@
 #include "CungHoangDao.h"
-#include "User.h"
 
 void CungHoangDao::print(User& user)  {
     NgaySinh ngaySinh = user.getDay(); 

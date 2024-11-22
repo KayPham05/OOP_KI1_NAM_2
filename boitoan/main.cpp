@@ -1,7 +1,7 @@
 #include "User.h"
+#include "Tarot.h"
 #include "ThanSoHoc.h"
 #include "CungHoangDao.h"
-#include "Tarot.h"
 #include <conio.h>
 #include <iostream>
 #include <cstdlib>
@@ -25,7 +25,7 @@ void openWebsite() {
 }
 
 int main() {
-    TarotReading tarot;
+    TarotDeck tarotDeck;
     CungHoangDao cung;
     User user;
     SoDuongDoi soDuongDoi;
@@ -39,6 +39,7 @@ int main() {
     do {
         system("cls");
         setColor(35);  // Màu tím cho chữ "Number God Study"
+        cout << endl;
         cout << "                                  N U M B E R       G O D       S T U D Y   " << endl;
         cout << "\n";
         resetColor();
@@ -267,9 +268,12 @@ do {
                 cin.get();
             } else if (selectedOption == 3) {
                 system("cls");
-                tarot.boiToan(user);
-                cout << "Nhan Enter de quay lai...\n";
-                cin.get();
+                try {
+                    boiTarot();
+                }
+                catch (const std::exception& e) {
+                    cerr << "Loi: " << e.what() << endl; // Thông báo lỗi nếu bộ bài hết lá
+                }
             } else {
                 break; // Thoát chương trình
             }

@@ -29,5 +29,6 @@ public:
     string getGT();
     string getBD();
 };
+void gotoXY(int x, int y);
 
 #endif 

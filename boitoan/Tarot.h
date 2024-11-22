@@ -1,31 +1,65 @@
 #ifndef TAROT_H
 #define TAROT_H
 
+#include <iostream>
 #include <vector>
 #include <string>
-#include "User.h"
+#include <stdexcept> // Để dùng cho ngoại lệ
+#include <conio.h>
+#include <cstdlib>
+using namespace std;
 
-struct TarotCard {
-    std::string ten;
-};
+class TarotCard {
+private:
+    string ten;
+    string daiDien;
+    string yNgia;
+    string tinhHuong;
 
-// Hàm rút ngẫu nhiên một lá bài từ bộ bài
-TarotCard RutBai(const std::vector<TarotCard>& deck);
-
-// Hàm tạo bộ bài Tarot
-std::vector<TarotCard> createTarotDeck();
-
-class FortuneTelling {
 public:
-    virtual void boiToan(User& user) = 0;
-    virtual std::string Soduongdoi(int Sochudao) = 0;
+    // Constructor
+    TarotCard(string ten = "", string daiDien = "", string yNgia = "", string tinhHuong = "");
+
+    // Getters
+    string getTen() const;
+    string getDaiDien() const;
+    string getYNgia() const;
+    string getTinhHuong() const;
+
+    // Display method
+    void display() const;
 };
 
-// Lớp kế thừa từ FortuneTelling để thực hiện bói toán Tarot
-class TarotReading : public FortuneTelling {
+class TarotDeck {
+private:
+    vector<TarotCard> deck;
+
 public:
-    void boiToan(User& user) override; // Thực hiện bói toán
-    std::string Soduongdoi(int Sochudao) override; // Tính số đường đời
-};
+    // Constructor
+    TarotDeck();
 
+    // Shuffle the deck
+    void shuffleDeck();
+
+    // Draw a card
+    TarotCard drawCard();
+
+
+    // Display the deck
+    void displayDeck() const;
+
+    // Get remaining cards
+    int getRemainingCards() const;
+
+};
+void boiTarot();
+
+
+//void OpenWebsite() {
+//    // URL of the website
+//    string url = "";
+//    // Open the URL in the default web browser
+//    string command = "start " + url;
+//    system(command.c_str());
+//}
 #endif // TAROT_H
