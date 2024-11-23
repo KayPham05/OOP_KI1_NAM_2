@@ -436,11 +436,11 @@ istream& operator>>(istream& is, User& p) {
             }
         }
         else {
-            gotoXY(17, 14);
+            gotoXY(17, 16);
             cout << p.day.ngay;
-            gotoXY(47, 14);
+            gotoXY(47, 16);
             cout << p.day.thang;
-            gotoXY(74, 14);
+            gotoXY(74, 16);
             cout << p.day.nam;
         }
 

@@ -411,41 +411,53 @@ int main() {
                             system("cls");
                             cout << "Ket qua So Duong Doi:\n";
                             soDuongDoi.thongTin(user);
+                            if (user.getDay().ngay != 0) {
 
-                            cout << "Neu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
+                            cout << "\nNeu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
                             cout << "+=======================================================+" << endl;
                             cout << "|     https://tracuuthansohoc.com/than-so-hoc-so-1/     |" << endl;
                             cout << "+=======================================================+" << endl;
+                            }
                             cin.get();
                         }
                         else if (thanSoOption == 1) {
                             system("cls");
                             cout << "Ket qua So Linh Hon:\n";
                             linhHon.thongTin(user);
-                            cout << "Neu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
+                            if (user.getDay().ngay != 0) {
+                            cout << "\nNeu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
                             cout << "+=======================================================+" << endl;
                             cout << "|     https://tracuuthansohoc.com/than-so-hoc-so-1/     |" << endl;
                             cout << "+=======================================================+" << endl;
+
+                            }
                             cin.get();
                         }
                         else if (thanSoOption == 2) {
                             system("cls");
                             cout << "Ket qua So Bieu Dat:\n";
                             bieuDat.thongTin(user);
-                            cout << "Neu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
+                           
+                            if (user.getDay().ngay != 0) {
+
+                            cout << "\nNeu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
                             cout << "+=======================================================+" << endl;
                             cout << "|     https://tracuuthansohoc.com/than-so-hoc-so-1/     |" << endl;
                             cout << "+=======================================================+" << endl;
+                            }
                             cin.get();
                         }
                         else if (thanSoOption == 3) {
                             system("cls");
                             cout << "Ket qua So Nhan Cach:\n";
                             nhanCach.thongTin(user);
-                            cout << "Neu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
+                            if (user.getDay().ngay != 0) {
+                            cout << "\nNeu ban can tim hieu them hay nhap vao duong link duoi day: " << endl;
                             cout << "+=======================================================+" << endl;
                             cout << "|     https://tracuuthansohoc.com/than-so-hoc-so-1/     |" << endl;
                             cout << "+=======================================================+" << endl;
+
+                            }
                             cin.get();
                         }
                         else {
