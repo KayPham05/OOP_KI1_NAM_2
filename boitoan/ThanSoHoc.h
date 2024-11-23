@@ -12,7 +12,7 @@ public:
 
     // Các phương thức ảo mà các lớp con phải cài đặt
     virtual int tinhSo(User& user) = 0;
-    virtual void thongTin(User& user) = 0; 
+    virtual void thongTin(User& user) = 0;
 };
 
 class SoDuongDoi : public ThanSoHoc {

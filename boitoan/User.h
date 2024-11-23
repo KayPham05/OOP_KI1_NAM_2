@@ -21,7 +21,7 @@ private:
     string BietDanh;
 public:
     User();
-    friend istream& operator>>(istream &is, User &p);
+    friend istream& operator>>(istream& is, User& p);
     //void output();
     //void readFromFile();
     NgaySinh getDay();
@@ -29,5 +29,6 @@ public:
     string getGT();
     string getBD();
 };
+void gotoXY(int x, int y);
 
 #endif 
