@@ -16,14 +16,14 @@ public:
 
     // Setters
     void setTenCung(string tenCung);
-    void setYNgia(string yNgia);
+    void setYNgia(string yNghia);
 
     // Getters
     string getTenCung() const;
     string getYNgia() const;
 
     // Hàm hi?n th? thông tin cung hoàng ??o
-    void Display(User& user) const;
+    void Display(User& user) ;
 
     // Hàm xác ??nh cung hoàng ??o t? ngày sinh
     void determineCungHoangDao(int ngay, int thang, string& tenCung, string& yNghia);

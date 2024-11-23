@@ -1,7 +1,104 @@
 #include "ThanSoHoc.h"
 #include <cctype>
 #include <cstring>
+#include <iostream>
+#include <vector>
+#include <Windows.h>
+#include <algorithm>
+#include <sstream>
+#include <string>
+#include <ctime>
+#include "Tarot.h"
+#include <conio.h>
+#include "User.h"
+
 using namespace std;
+
+void setColor4(int color) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, color);
+}
+
+// Hàm di chuyển con trỏ đến vị trí (x, y)
+void gotoXY2(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+
+// Hàm mở website
+void Openwebsite1() {
+    string url = "https://honghala.com/12-cung-hoang-dao/";
+    string command = "start " + url;
+    system(command.c_str());
+}
+
+// Hàm vẽ khung
+void drawBox2(int x, int y, int width, int height, int color) {
+    setColor4(color);
+    gotoXY2(x, y);
+    cout << char(201); // Góc trên trái
+    gotoXY2(x + width, y);
+    cout << char(187); // Góc trên phải
+    gotoXY2(x, y + height);
+    cout << char(200); // Góc dưới trái
+    gotoXY2(x + width, y + height);
+    cout << char(188); // Góc dưới phải
+
+    // Vẽ cạnh trên và dưới
+    for (int i = 1; i < width; i++) {
+        gotoXY2(x + i, y);
+        cout << char(205); // Ký tự ngang
+        gotoXY2(x + i, y + height);
+        cout << char(205); // Ký tự ngang
+    }
+
+    // Vẽ cạnh trái và phải
+    for (int i = 1; i < height; i++) {
+        gotoXY2(x, y + i);
+        cout << char(186); // Ký tự dọc
+        gotoXY2(x + width, y + i);
+        cout << char(186); // Ký tự dọc
+    }
+
+    setColor4(7); // Trả về màu mặc định
+}
+void printWithLineBreaks2(const string& text, int maxCharsPerLine, int x, int y) {
+    int currentLineLength = 0; // Độ dài dòng hiện tại
+    string currentWord;        // Từ hiện tại đang xử lý
+    int currentY = y;          // Vị trí dòng y hiện tại
+
+    for (size_t i = 0; i < text.length(); ++i) {
+        char c = text[i];
+        if (c == ' ' || i == text.length() - 1) {
+            // Thêm ký tự cuối nếu là ký tự cuối cùng
+            if (i == text.length() - 1 && c != ' ') {
+                currentWord += c;
+            }
+
+            // Nếu từ hiện tại không vừa dòng, xuống dòng
+            if (currentLineLength + currentWord.length() > maxCharsPerLine) {
+                currentY++;                 // Tăng dòng
+                currentLineLength = 0;      // Đặt lại độ dài dòng
+                gotoXY(x, currentY);        // Di chuyển con trỏ đến đầu dòng mới
+            }
+
+            // In từ hiện tại
+            if (currentLineLength > 0) {
+                cout << " ";                // Thêm khoảng cách giữa các từ
+                currentLineLength++;
+            }
+            cout << currentWord;            // In từ
+            currentLineLength += currentWord.length();
+            currentWord.clear();
+        }
+        else {
+            // Ghép ký tự vào từ hiện tại
+            currentWord += c;
+        }
+    }
+}
 
 // Phương thức reduceToSingleDigit để giảm số về một chữ số
 int ThanSoHoc::reduceToSingleDigit(int num) {
@@ -29,8 +126,8 @@ int SoDuongDoi::tinhSo(User& user) {
 
 void SoDuongDoi::thongTin(User& user) {
     int number = tinhSo(user);
-    cout << "Ngay thang nam sinh cua ban:" << endl;
-    cout << user.getDay().ngay << "/" << user.getDay().thang << "/" << user.getDay().nam << endl;
+    //cout << "Ngay thang nam sinh cua ban:" << endl;
+    //cout << user.getDay().ngay << "/" << user.getDay().thang << "/" << user.getDay().nam << endl;
     cout << "Co so duong doi la: " << number << endl;
 
     switch (number) {
