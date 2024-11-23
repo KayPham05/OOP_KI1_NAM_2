@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\",
   "Documents": [
     {
@@ -37,6 +38,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\thong_tin_nguoi_dung.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:thong_tin_nguoi_dung.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+=======
+  "WorkspaceRootPath": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\CMakeWorkspaceSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\CMakeWorkspaceSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Tarot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+>>>>>>> da8e989 (sy)
     }
   ],
   "DocumentGroupContainers": [
@@ -46,6 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -142,10 +159,27 @@
               "ViewState": "AgIAAE4AAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-19T10:19:14.469Z"
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tasks.vs.json",
+              "DocumentMoniker": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\tasks.vs.json",
+              "RelativeDocumentMoniker": ".vs\\tasks.vs.json",
+              "ToolTip": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\tasks.vs.json",
+              "RelativeToolTip": ".vs\\tasks.vs.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-20T15:51:44.318Z",
+              "EditorCaption": ""
+>>>>>>> da8e989 (sy)
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Git\\BTL\\OOP_KI1_NAM_2\\boitoan\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -154,6 +188,29 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-18T06:29:06.499Z",
+=======
+              "Title": "CMakeWorkspaceSettings.json",
+              "DocumentMoniker": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\CMakeWorkspaceSettings.json",
+              "RelativeDocumentMoniker": ".vs\\CMakeWorkspaceSettings.json",
+              "ToolTip": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\.vs\\CMakeWorkspaceSettings.json",
+              "RelativeToolTip": ".vs\\CMakeWorkspaceSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-20T15:51:40.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tarot.h",
+              "DocumentMoniker": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h",
+              "RelativeDocumentMoniker": "Tarot.h",
+              "ToolTip": "D:\\study\\BTL\\OOP_KI1_NAM_2\\boitoan\\Tarot.h",
+              "RelativeToolTip": "Tarot.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-20T15:50:14.985Z",
+>>>>>>> da8e989 (sy)
               "EditorCaption": ""
             }
           ]

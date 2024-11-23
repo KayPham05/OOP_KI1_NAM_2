@@ -9,10 +9,7 @@
 #include<string>
 using namespace std;
 
-// Hàm để thay đổi màu chữ
-void setColor(int color) {
-    cout << "\033[" << color << "m";
-}
+
 
 void resetColor() {
     cout << "\033[0m";
@@ -230,7 +227,89 @@ int main() {
             }
 
             else if (selectedFortuneOption == 4) {
-                returnToMainMenu = true; // Quay lại menu chính
+                do {
+        system("cls");
+        setColor(35);  // Màu tím cho chữ "Number God Study"
+        cout << endl;
+        cout << "                                  N U M B E R       G O D       S T U D Y   " << endl;
+        cout << "\n";
+        resetColor();
+        setColor(33);
+        cout << "                                 +---------------------------------------+" << endl;
+        setColor(31);
+        cout << "                                 |              CHON VAI TRO             |" << endl;
+        setColor(35);
+        cout << "                                 +---------------------------------------+" << endl;
+        resetColor();
+
+        // Menu lựa chọn vai trò: Admin hay Người dùng
+        if (selectedRoleOption == 0) {
+            setColor(32);  // Màu xanh lá cây cho mục được chọn
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Admin                              |" << endl;
+            cout << "                                 =========================================" << endl;
+            resetColor();  // Trở lại màu bình thường
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Admin                                 |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        if (selectedRoleOption == 1) {
+            setColor(33);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Nguoi dung                         |" << endl;
+            cout << "                                 =========================================" << endl;
+            resetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Nguoi dung                            |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        if (selectedRoleOption == 2) {
+            setColor(33);
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " -> Thoat                              |" << endl;
+            cout << "                                 =========================================" << endl;
+            resetColor();
+        }
+        else {
+            cout << "                                 =========================================" << endl;
+            cout << "                                 |" << " Thoat                                 |" << endl;
+            cout << "                                 =========================================" << endl;
+        }
+
+        cout << "                                 +---------------------------------------+" << endl;
+        key = _getch();
+        if (key == 72) { // Mũi tên lên
+            selectedRoleOption = (selectedRoleOption - 1 + 3) % 3;
+        }
+        else if (key == 80) { // Mũi tên xuống
+            selectedRoleOption = (selectedRoleOption + 1) % 3;
+        }
+        else if (key == 13) { // Enter
+            if (selectedRoleOption == 0) {
+                cout << "Chức năng Admin đang được phát triển...\n";
+                cin.get();
+            }
+            else if (selectedRoleOption == 2) {
+                exitProgram = true; // Đặt biến thoát chương trình
+                break; // Thoát khỏi vòng lặp
+            }
+            else if (selectedRoleOption == 1) {
+                break; // Thoát khỏi vòng lặp
+            }
+        }
+    } while (!exitProgram && !returnToMainMenu);  // Kiểm tra biến điều kiện thoát
+
+    if (exitProgram) {
+        cout << "Nhan enter de thoat .\n";
+        return 0;  // Thoát chương trình
+    }
+
             }
             else if (selectedFortuneOption == 1) {
                 int thanSoOption = 0;
@@ -395,9 +474,7 @@ int main() {
                 }
             }
 
-            else {
-                break; // Thoát chương trình
-            }
+            
 
         }
 
