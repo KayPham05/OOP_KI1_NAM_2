@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <conio.h>
 #include <limits>
+
 bool isLeapYear(int nam) {
     return (nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0);
 }

@@ -42,9 +42,13 @@ int main() {
         cout << "                                  N U M B E R       G O D       S T U D Y   " << endl;
         cout << "\n";
         resetColor();
+        setColor(33);
         cout << "                                 +---------------------------------------+" << endl;
-        cout << "                                 |               MENU CHINH              |" << endl;
+        setColor(31);
+        cout << "                                 |               BOI TOAN                |" << endl;
+        setColor(35);
         cout << "                                 +---------------------------------------+" << endl;
+        resetColor();
 
         // Mục 1: Nhập thông tin người xem bói
         if (selectedOption == 0) {
@@ -133,10 +137,13 @@ do {
     cout << "                                  N U M B E R       G O D       S T U D Y   " << endl;
     cout << "\n";
     resetColor();
+    setColor(33);
     cout << "                                 +---------------------------------------+" << endl;
-    cout << "                                 |             XEM THAN SO HOC           |" << endl;
+    setColor(31);
+    cout << "                                 |           BOI THAN SO HOC             |" << endl;
+    setColor(35);
     cout << "                                 +---------------------------------------+" << endl;
-
+    resetColor();
     // Mục 1: Nhập thông tin người xem bói
     if (thanSoOption == 0) {
         setColor(32);  // Màu xanh lá cây cho mục được chọn

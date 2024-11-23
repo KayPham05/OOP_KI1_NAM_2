@@ -1,6 +1,11 @@
 #include "ThanSoHoc.h"
 #include <cctype>
 #include <cstring>
+#include <conio.h>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <windows.h>
 using namespace std;
 
 // Phương thức reduceToSingleDigit để giảm số về một chữ số
@@ -15,6 +20,8 @@ int ThanSoHoc::reduceToSingleDigit(int num) {
     }
     return num;
 }
+
+
 
 // Lớp con SoDuongDoi
 int SoDuongDoi::tinhSo(User& user) {
@@ -33,11 +40,12 @@ void SoDuongDoi::thongTin(User& user) {
     cout << "Co so duong doi la: " << number << endl;
 
     switch (number) {
-        case 1:
-                cout<<"So 1 la hien than cua su tao bao, doi moi, chap nhan rui ro, kha nang phuc hoi va di theo trai tim minh. "
-                   "Nhan so hoc so 1 giup phat trien su sang tao va su tu tin cua ban trong moi khia canh cua cuoc song. "
-                   "Muc dich song cua nhung nguoi co so chu dao 1 la mang toi nang luong sang tao tich cuc, dat duoc su doc lap trong cac moi quan he cua ban than.";
-                   break;
+
+    case 1:
+        cout << "So 2 la hien than cho su kien nhan, cong bang, kha nang ngoai giao va mot tam long yeu thuong, nhan ai. "
+            "Nhiem vu cua so chu dao 2 la tro thanh nguoi ket noi, hoa giai, dem tinh yeu thuong vao cac moi quan he trong moi khia canh cuoc song. "
+            "Muc dich song cua nhung nguoi nay la hoc duoc cach lam viec hai hoa, can bang va ton trong lan nhau.";
+        break;
             case 2:
                 cout<<"So 2 la hien than cho su kien nhan, cong bang, kha nang ngoai giao va mot tam long yeu thuong, nhan ai. "
            "Nhiem vu cua so chu dao 2 la tro thanh nguoi ket noi, hoa giai, dem tinh yeu thuong vao cac moi quan he trong moi khia canh cuoc song. "
